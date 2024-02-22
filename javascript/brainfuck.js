@@ -32,6 +32,7 @@ for (i = 0; i < input.length; i++) {
 			break;
 		case ",":
 			fs.readSync(0, buffer, d, 1);
+			if (buffer[d] == 10) buffer[d] = 0;
 			break;
 		case "[":
 			if (buffer[d] == 0) {
